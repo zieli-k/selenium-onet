@@ -1,0 +1,10 @@
+{
+    "prod": {
+        "urls": {
+            "main_url": "https://www.python.org/",
+            "about_url": "/about"
+        },
+        "service": "10.38.101.38",
+        "database": "sigma-sql-preprod"
+    }
+}

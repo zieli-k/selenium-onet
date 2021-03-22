@@ -3,8 +3,6 @@ from webdriver_manager.chrome import ChromeDriverManager
 import unittest
 from configuration.config import Url
 import sys
-
-from webdriver_manager.utils import ChromeType
 from webdriver_options import WebdriverOptions
 from web_pages.pages import MainPage, AboutPage
 
@@ -31,7 +29,7 @@ class MainPageTest(unittest.TestCase):
 class AboutPageTest(unittest.TestCase):
     def setUp(self):
         options = WebdriverOptions().options
-        self.driver = webdriver.Chrome(ChromeDriverManager().install(), options=options)
+        self.driver = webdriver.Chrome(executable_path="configuration/drivers/chromedriver.exe", options=options)
         self.main_page = MainPage(self.driver)
         self.about_page = AboutPage(self.driver)
         self.url = Url(ENV).get_main_url()

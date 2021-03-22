@@ -12,7 +12,8 @@ from web_pages.pages import MainPage, AboutPage
 class MainPageTest(unittest.TestCase):
     def setUp(self):
         options = WebdriverOptions().options
-        self.driver = webdriver.Chrome(ChromeDriverManager(chrome_type=ChromeType.GOOGLE).install(), options=options)
+        self.driver = webdriver.Chrome(executable_path="configuration/drivers/chromedriver.exe", options=options)
+        #self.driver = webdriver.Chrome(ChromeDriverManager(chrome_type=ChromeType.GOOGLE).install(), options=options)
         self.main_page = MainPage(self.driver)
         self.url = Url(ENV).get_main_url()
 

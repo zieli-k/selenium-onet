@@ -38,7 +38,7 @@ class AboutPageTest(unittest.TestCase):
         try:
             self.main_page.driver.get(self.url)
             self.main_page.click_about()
-            assert "Python is powerfull" in self.about_page.get_about_banner_text()
+            assert "Python is powerful" in self.about_page.get_about_banner_text()
         except AssertionError:
             self.driver.save_screenshot("about_page.png")
             raise Exception("Bad text or element doesn't exists")
